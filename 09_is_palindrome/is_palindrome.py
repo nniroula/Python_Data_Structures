@@ -21,3 +21,15 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    right = False
+    for i in range(len(phrase.lower())):
+        if phrase[len(phrase) - 1 - i] == phrase[i]:
+            right = True
+    return right
+print(is_palindrome('tacocat'))
+print(is_palindrome('noon'))
+print(is_palindrome('robert'))
+
+print(is_palindrome('taco cat'))
+print(is_palindrome('Noon'))
+
