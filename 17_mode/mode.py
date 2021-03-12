@@ -11,3 +11,14 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    num_count = [] #holds the count of repetition of numbers
+    for num in nums:
+        num_count.append(nums.count(num))
+    highest = num_count[0]
+    for i in range(len(num_count)):
+        if highest < num_count[i]:
+            highest = num_count[i]
+    index = num_count.index(highest)
+    return nums[index]
+print(mode([1, 2, 1]))
+print(mode([2, 2, 3, 3, 2]))
